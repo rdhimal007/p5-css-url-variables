@@ -1,7 +1,12 @@
 
 let clr = 'red';
 let clr_input;
-let num_input; 
+let num_input;
+let img;
+function preload(){
+  img = loadImage("default.jpg");
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
@@ -18,10 +23,11 @@ function setup() {
   //add submit button
   button = createButton('submit');
   button.position(clr_input.x + clr_input.width, clr_input.y);
+
 }
 
 function draw() {
- 
+  image(img, mouseX, 200);
   stroke('red');
   line(random(width), random(height), random(width), random(height));
   //on button press
